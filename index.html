@@ -261,9 +261,10 @@
                 </div>
                 
                 <div class="contact-right">
-                    <form id="contact-form" class="contact-form" name="contact" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                    <form id="contact-form" class="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/?form-submitted=true#contact">
+                        <input type="hidden" name="form-name" value="contact">
                         <p class="hidden">
-                            <!-- <label>Don't fill this out if you're human: <input name="bot-field" /></label> -->
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
                         <div class="form-group">
                             <input type="text" id="name" name="name" required>
@@ -287,8 +288,6 @@
                             <label for="message">Your Message</label>
                             <div class="error-message">Please enter your message</div>
                         </div>
-                        <div data-netlify-recaptcha="true"></div>
-                        
                         <button type="submit" class="btn">
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
@@ -454,38 +453,41 @@
                 return isValid;
             }
 
-            // Form submission
+            // Form submission with progressive enhancement
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
+                if (!validateForm()) {
+                    e.preventDefault();
+                    return;
+                }
                 
-                if (validateForm()) {
-                    const submitButton = form.querySelector('button[type="submit"]');
-                    const originalButtonText = submitButton.innerHTML;
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerHTML;
+                
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                // Hide any previous messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // For AJAX submission (optional)
+                if (window.fetch) {
+                    e.preventDefault();
+                    const formData = new FormData(form);
                     
-                    // Show loading state
-                    submitButton.disabled = true;
-                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    
-                    // Hide any previous messages
-                    successMessage.style.display = 'none';
-                    errorMessage.style.display = 'none';
-                    
-                    // Let Netlify handle the form submission
                     fetch('/', {
                         method: 'POST',
-                        body: new FormData(form),
+                        body: new URLSearchParams(new FormData(form)).toString(),
                         headers: {
-                            'Accept': 'application/x-www-form-urlencoded',
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }
                     })
                     .then(response => {
                         if (response.ok) {
                             // Show success message
                             successMessage.style.display = 'flex';
                             form.reset();
-                            
-                            // Scroll to success message
                             successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                             
                             // Hide success message after 5 seconds
@@ -493,7 +495,7 @@
                                 successMessage.style.display = 'none';
                             }, 5000);
                         } else {
-                            throw new Error('Network response was not ok');
+                            throw new Error('Form submission failed');
                         }
                     })
                     .catch(error => {
@@ -507,7 +509,24 @@
                         submitButton.innerHTML = originalButtonText;
                     });
                 }
+                // If fetch is not supported, the form will submit normally
             });
+            
+            // Check for success in URL hash
+            if (window.location.hash === '#contact' && new URLSearchParams(window.location.search).get('form-submitted') === 'true') {
+                // Show success message
+                successMessage.style.display = 'flex';
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+                
+                // Clean up URL without page reload
+                const cleanUrl = window.location.pathname + window.location.hash;
+                window.history.replaceState({}, document.title, cleanUrl);
+            }
 
             // Add floating label effect
             const formInputs = form.querySelectorAll('input, textarea');
