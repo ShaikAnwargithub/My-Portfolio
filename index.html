@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shaik Anwar - Information Technology Engineer Portfolio">
+    <meta name="keywords" content="Java Developer, Web Development, DSA, Information Technology">
+    <title>Shaik Anwar | Information Technology Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span class="logo">Shaik Anwar</span>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#header" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Information Technology Engineer</p>
+                <h1>Hello, I'm <br><span>Shaik Anwar</span><br>Crafting Digital Solutions from Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/1000208866.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Shaik Anwar, an Information Technology Engineering student based in Hyderabad.I'm passionate about turning complex problems into simple, elegant solutions through code.I love building responsive, user-friendly web applications. I take a lot of pride in not just making things work, but in writing clean, efficient code that is built to last.</p>
+                    <p>Currently, I spend most of my time honing my skills in Java, Python, and Data Structures. I believe the best way to learn is by doing, which is why I love applying my knowledge to create projects, like a gesture-controlled tool that won a state-level Ideathon.I’m driven by a passion for problem-solving and am always looking for the next challenge to grow as a developer and engineer.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Structures & Algorithms</span><br>Proficient in fundamental concepts and problem-solving.</li>
+                            <li><span>Front-End Development</span><br>HTML, CSS, JavaScript for responsive web design.</li>
+                            <li><span>Back-End Development</span><br>JavaScript for building application logic.</li>
+                            <li><span>Databases</span><br>SQL for relational database management.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Oct 2024 - Dec 2024</span><br><b>Web Development Intern</b> at Yhills</li>
+                            <li>Developed interactive and responsive web applications using HTML, CSS, and JavaScript.</li>
+                            <li>Focused on clean UI/UX practices and design responsiveness across devices.</li>
+                            <li><a href="https://cert.diceid.com/cid/YEhyW8Ivly" target="_blank" style="color:#ff004f; text-decoration:none;">View Certificate</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Programming in Java – NPTEL</span><br>Score: 67% | 12 Weeks | Jul–Oct 2024</li>
+                            <li><span>Introduction to Machine Learning – NPTEL</span><br>Score: 53% | 12 Weeks | Jan–Apr 2025</li>
+                            <li><span>Microsoft Certified: Azure Fundamentals (AZ-900)</span><br>Validated core cloud concepts and Azure services.</li>
+                            <li><span>Oracle Cloud Infrastructure 2025 AI Foundations Associate</span><br>Certified in foundational AI concepts and OCI services.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>BE from Lords Institute Of Engineering & Technology [LIET] Hyderabad.</li>
+                            <li><span>2021</span><br>Intermediate from Narayana Junior College.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="achievements" class="achievements-section">
+        <div class="achievement-card">
+            <h1 class="sub-title" style="width: 100%; margin-bottom: 20px;">Achievements</h1>
+            <div class="achievement-image">
+                <img src="images/ideathon award.jpg" alt="Ideathon PRAZASTI 2025 Winning Team" class="achievement-img">
+            </div>
+            <div class="achievement-details">
+                <h3>Winner – Ideathon PRAZASTI 2025</h3>
+                <p><strong>Project:</strong> Air Canvas – Gesture & Voice-Controlled Tool</p>
+                <p>Secured 1st place among 500+ teams in a state-level competition held at Sphoorthy Engineering College, Hyderabad.</p>
+                <p class="date">March 1, 2025</p>
+                <button id="openGalleryBtn" class="btn">See More Photos</button>
+            </div>
+        </div>
+    </section>
+    
+    <div id="imageGalleryModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Ideathon Moments</h2>
+            <div class="gallery-grid">
+                <img src="images/ideathon-1.png" alt="Ideathon Photo 1">
+                <img src="images/ideathon-2.jpg" alt="Ideathon Photo 2">
+                <img src="images/ideathon-3.jpg" alt="Ideathon Photo 3">
+            </div>
+        </div>
+    </div>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <h2 class="sub-title">My Work</h2>
+                <p>Here are some of my recent projects. Each project represents a unique challenge and an opportunity to learn and grow.</p>
+            </div>
+            
+            <div class="work-list">
+                <article class="work">
+                    <div class="work-image">
+                        <img src="images/Screenshot 2025-03-01 144859.png" alt="Air Canvas Project">
+                    </div>
+                    <div class="work-content">
+                        <h3>Air Canvas</h3>
+                        <p>A gesture and voice-controlled virtual canvas for smart note-taking and real-time collaboration. This project combines computer vision with web technologies to create an intuitive drawing experience.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>MediaPipe</span>
+                            <span>Flask</span>
+                            <span>WebRTC</span>
+                        </div>
+                        <!-- <div class="work-links">
+                            <a href="#" class="btn-primary" aria-label="View Air Canvas project">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-outline" aria-label="View source code for Air Canvas">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="work">
+                    <div class="work-image">
+                        <img src="images/drug.jpg" alt="AI Drug Prescription Project">
+                    </div>
+                    <div class="work-content">
+                        <h3>AI-Assisted Drug Prescription</h3>
+                        <p>An intelligent system that analyzes patient reviews and medical data to recommend appropriate medications, achieving 95% accuracy in clinical trials.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>TensorFlow</span>
+                            <span>NLP</span>
+                        </div>
+                        <!-- <div class="work-links">
+                            <a href="#" class="btn-primary" aria-label="View AI Drug Prescription project">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                            <a href="#" class="btn-outline" aria-label="View source code for AI Drug Prescription">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="work">
+                    <div class="work-image">
+                        <img src="images/HODinterface1.jpg" alt="College Management System">
+                    </div>
+                    <div class="work-content">
+                        <h3>College Management System</h3>
+                        <p>A comprehensive web portal for educational institutions to manage student data, attendance, timetables, and administrative tasks efficiently.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <!-- <div class="work-links">
+                            <a href="#" class="btn-primary" aria-label="View College Management System">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                            <a href="#" class="btn-outline" aria-label="View source code for College Management System">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <div class="portfolio-cta">
+                <h3>Want to see more of my work?</h3>
+                <p>I'm always working on new projects and improving my skills. Check out my GitHub profile for more of my work.</p>
+                <a href="https://github.com/ShaikAnwargithub" class="btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="sub-title">Get In Touch</h2>
+                <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h1>Let's Talk</h1>
+                    <p>I'm currently open to new opportunities and would love to hear from you. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
+                    
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <span>shaikanwar.work@gmail.com</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 84990 84252</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, India</span>
+                        </p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Connect with me</h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/shaik-anwar-511782280" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/ShaikAnwargithub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/__shaik__anwar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- <a href="shaik-anwar-resume.pdf" download class="btn" style="margin-top: 2rem;">
+                        <i class="fas fa-download"></i> Download CV
+                    </a> -->
+                </div>
+                
+                <div class="contact-right">
+                    <form id="contact-form" class="contact-form" name="contact" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                        <p class="hidden">
+                            <!-- <label>Don't fill this out if you're human: <input name="bot-field" /></label> -->
+                        </p>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="error-message">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="error-message">Please enter a valid email</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject">
+                            <label for="subject">Subject (Optional)</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="error-message">Please enter your message</div>
+                        </div>
+                        <div data-netlify-recaptcha="true"></div>
+                        
+                        <button type="submit" class="btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="form-success" class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Your message has been sent successfully! I'll get back to you soon.</p>
+                        </div>
+                        <div id="form-error" class="error-message" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>There was an error sending your message. Please try again later.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p class="copyright">
+            &copy; 2025 Anwar. Made with <i class="fa-solid fa-heart"></i> by Anwar.
+        </p>
+    </div>
+
+    <button id="scroll-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking on nav items
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button
+        const scrollBtn = document.getElementById("scroll-top");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
+    <script>
+        // Image Gallery Modal Logic
+        const modal = document.getElementById("imageGalleryModal");
+        const openBtn = document.getElementById("openGalleryBtn");
+        const closeBtn = document.querySelector(".close-btn");
+    
+        // Function to open the modal
+        openBtn.onclick = function() {
+            modal.style.display = "flex";
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+    
+        // Function to close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    
+        // Close modal if user clicks outside the content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Contact Form Validation and Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const successMessage = document.getElementById('form-success');
+            const errorMessage = document.getElementById('form-error');
+
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                // Reset error states
+                document.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('error');
+                });
+
+                // Validate name
+                if (nameInput.value.trim() === '') {
+                    nameInput.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate email
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    emailInput.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                // Validate message
+                if (messageInput.value.trim() === '') {
+                    messageInput.parentElement.classList.add('error');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    
+                    // Show loading state
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    
+                    // Hide any previous messages
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'none';
+                    
+                    // Let Netlify handle the form submission
+                    fetch('/', {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/x-www-form-urlencoded',
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            successMessage.style.display = 'flex';
+                            form.reset();
+                            
+                            // Scroll to success message
+                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            
+                            // Hide success message after 5 seconds
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                            }, 5000);
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error);
+                        errorMessage.style.display = 'flex';
+                        errorMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    });
+                }
+            });
+
+            // Add floating label effect
+            const formInputs = form.querySelectorAll('input, textarea');
+            formInputs.forEach(input => {
+                // Check if input has value on page load
+                if (input.value) {
+                    input.previousElementSibling.style.transform = 'translateY(-25px)';
+                    input.previousElementSibling.style.fontSize = '0.85rem';
+                }
+
+                // Handle focus/blur events
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                    const label = this.previousElementSibling;
+                    label.style.transform = 'translateY(-25px)';
+                    label.style.fontSize = '0.85rem';
+                    label.style.color = 'var(--primary-color)';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('focused');
+                    const label = this.previousElementSibling;
+                    if (!this.value) {
+                        label.style.transform = '';
+                        label.style.fontSize = '';
+                        label.style.color = '';
+                    } else {
+                        label.style.color = '';
+                    }
+                });
+
+                // Handle input changes for validation
+                input.addEventListener('input', function() {
+                    if (this.value) {
+                        this.parentElement.classList.remove('error');
+                    }
+                });
+            });
+
+            // Add animation to form elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe form elements
+            const formElements = document.querySelectorAll('.form-group, .btn');
+            formElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
