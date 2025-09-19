@@ -1,6 +1,6 @@
 # Shaik Anwar - Portfolio Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_DEPLOY_ID/deploy-status)](https://app.netlify.com/sites/YOUR_SITE_NAME/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68cdaa637e18f2000850229b/deploy-status)](https://app.netlify.com/sites/shaikanwarportfolio/deploys)
 
 A modern, responsive portfolio website showcasing my skills, projects, and achievements as an Information Technology Engineer.
 
@@ -25,7 +25,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and achie
 
 ## 🚀 Live Demo
 
-Check out the live version of the website: [Your Portfolio](https://your-portfolio-url.netlify.app)
+Check out the live version of the website: (https://shaikanwarportfolio.netlify.app)
 
 ## 🛠️ Local Development
 
@@ -39,7 +39,7 @@ Check out the live version of the website: [Your Portfolio](https://your-portfol
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
+   git clone https://github.com/ShaikAnwargithub/your-portfolio.git
    cd your-portfolio
    ```
 
@@ -74,9 +74,6 @@ my_website/
 3. Add your project image to the `images/` directory
 4. Update the image source in the project card
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
@@ -90,9 +87,9 @@ Contributions are always welcome! If you'd like to contribute:
 ## 📞 Contact
 
 - **Name**: Shaik Anwar
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Email**: shaikanwar.work@gmail.com
+- **LinkedIn**: [ShaikAnwar](www.linkedin.com/in/shaikanwar05)
+- **GitHub**: [ShaikAnwar](https://github.com/ShaikAnwargithub)
 
 ---
 
