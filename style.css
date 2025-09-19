@@ -129,7 +129,7 @@ nav ul li a:hover::after {
 /* About Section */
 #about {
     position: relative;
-    /* padding: 60px 0; */
+    padding: 4rem 0;
     background: var(--bg-light);
     z-index: 1;
     width: 100%;
@@ -1055,6 +1055,26 @@ form .btn2 {
     .achievement-details {
         min-width: unset;
     }
+    /* About Section Specific */
+    .about-col-2 h1 {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .about-col-2 p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tab-titles {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .tab-links {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 /* --------------- Image Gallery Modal --------------- */
@@ -1186,11 +1206,46 @@ form .btn2 {
 @media screen and (max-width: 768px) {
     /* Base Styles */
     html {
-        font-size: 14px;
+        font-size: 15px;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    #about {
+        padding: 2rem 0;
     }
     
     .container {
         padding: 0 1.5rem;
+    }
+    
+    /* About Section Improvements */
+    #about .about-col-1 {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    #about .about-col-2 {
+        flex-basis: 100%;
+    }
+    
+    .about-col-2 p {
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    .tab-titles {
+        margin: 1.5rem 0;
+    }
+    
+    .tab-contents ul li {
+        margin: 0.8rem 0;
+    }
+    
+    .tab-contents {
+        padding: 1rem 0;
     }
     
     /* Navigation */
@@ -1234,11 +1289,56 @@ form .btn2 {
     /* About Section */
     .row {
         flex-direction: column;
+        gap: 1.5rem;
     }
     
     .about-col-1, 
     .about-col-2 {
         flex-basis: 100%;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .about-col-1 {
+        margin-bottom: 1rem;
+    }
+    
+    .about-col-1 img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1.5rem;
+        display: block;
+        height: auto;
+        aspect-ratio: 3/4;
+    }
+    
+    .about-col-2 h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0 1rem;
+        line-height: 1.3;
+    }
+    
+    .about-col-2 p {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    .tab-titles {
+        margin: 0.5rem 0 1rem;
+        gap: 0.5rem;
+    }
+    
+    .tab-links {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+        margin-right: 0.5rem;
+    }
+    
+    .tab-contents ul li {
+        margin: 0.8rem 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .about-col-1 img {
